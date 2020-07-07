@@ -1,0 +1,54 @@
+.sortTable {
+  width: 100%;
+  th {
+    cursor: pointer;
+    background-color: #d8d8d8;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    span {
+      display: inline-block;
+      position: relative;
+    }
+  }
+  .active {
+    span {
+      &::after {
+        top: 6px;
+        right: -18px;
+        width: 0;
+        height: 0;
+        content: ' ';
+        display: block;
+        position: absolute;
+        border: 6px solid transparent;
+        border-top-color: #000;
+      }
+    }
+    &.up {
+      span {
+        &::after {
+          top: 0;
+          border-top-color:transparent;
+          border-bottom-color: #000;
+        }
+      }
+    }
+  }
+  th,
+  td {
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #000;
+  }
+  &-wrap {
+    position: relative;
+  }
+  &-move-block {
+    position: absolute;
+    height: 100%;
+    width: 26px;
+    cursor: vertical-text;
+    margin: -36px 0 0 -34px;
+  }
+}
