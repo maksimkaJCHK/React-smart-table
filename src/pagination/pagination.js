@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './pagination.scss';
 
 export default function Pagination(props) {
-  let {data, checkPag, pageCount, visibleItems} = props;
+  let { data, checkPag, pageCount, visibleItems } = props;
   pageCount = (pageCount == '') ? 0 : pageCount - 1;
 
   if(data.length <= visibleItems) {

@@ -43,17 +43,19 @@ export default class SortTable extends Component {
         {data.length
         ? <table className = 'sortTable' id='sortTable'>
             <thead>
-              <th style = {{width: `${wFCell}%`}} onClick = {this.props.handleSort} className = {classId}>
-                <span>ID</span>
-              </th>
-              <th style = {{width: `${wSCell}%`}} onClick = {this.props.handleSort} className = {classN}>
-                <span>Name</span>
-                <div className = 'sortTable-move-block' onClick = {e => e.stopPropagation()} onMouseOver = {this.props.mouseOver} onMouseMove = {this.props.moveCell_1_2} onMouseUp = {this.props.mouseUp} onMouseDown = {this.props.mouseDown} ></div>
-              </th>
-              <th style = {{width: `${wTCell}%`}} onClick = {this.props.handleSort} className = {classValue}>
-                <span>Value</span>
-                <div className = 'sortTable-move-block' onClick = {e => e.stopPropagation()} onMouseOver = {this.props.mouseOver} onMouseMove = {this.props.moveCell_2_3} onMouseUp = {this.props.mouseUp} onMouseDown = {this.props.mouseDown} ></div>
-              </th>
+              <tr>
+                <th style = {{width: `${wFCell}%`}} onClick = {this.props.handleSort} className = {classId}>
+                  <span>ID</span>
+                </th>
+                <th style = {{width: `${wSCell}%`}} onClick = {this.props.handleSort} className = {classN}>
+                  <span>Name</span>
+                  <div className = 'sortTable-move-block' onClick = {e => e.stopPropagation()} onMouseOver = {this.props.mouseOver} onMouseMove = {this.props.moveCell_1_2} onMouseUp = {this.props.mouseUp} onMouseDown = {this.props.mouseDown} ></div>
+                </th>
+                <th style = {{width: `${wTCell}%`}} onClick = {this.props.handleSort} className = {classValue}>
+                  <span>Value</span>
+                  <div className = 'sortTable-move-block' onClick = {e => e.stopPropagation()} onMouseOver = {this.props.mouseOver} onMouseMove = {this.props.moveCell_2_3} onMouseUp = {this.props.mouseUp} onMouseDown = {this.props.mouseDown} ></div>
+                </th>
+              </tr>
             </thead>
             <tbody>
               {data.map((el, count)=><tr key={count}>
